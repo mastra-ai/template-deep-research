@@ -2,7 +2,7 @@ import { Agent } from '@mastra/core/agent';
 import { openai } from '@ai-sdk/openai';
 
 // Initialize model
-const mainModel = openai('gpt-4.1');
+const mainModel = openai(process.env.MODEL ?? "gpt-4.1");
 
 export const learningExtractionAgent = new Agent({
   name: 'Learning Extraction Agent',
