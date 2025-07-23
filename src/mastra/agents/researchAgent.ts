@@ -4,12 +4,7 @@ import { evaluateResultTool } from '../tools/evaluateResultTool';
 import { extractLearningsTool } from '../tools/extractLearningsTool';
 import { webSearchTool } from '../tools/webSearchTool';
 
-<<<<<<< HEAD
 const mainModel = openai(process.env.MODEL ?? "gpt-4.1");
-=======
-// Initialize model
-const mainModel = openai(process.env.MODEL ?? "gpt-4.1");
->>>>>>> 8b20cec167a5d42694cffdd0994683e79805cd73
 
 export const researchAgent = new Agent({
   name: 'Research Agent',
