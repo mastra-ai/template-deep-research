@@ -1,8 +1,8 @@
 import { Agent } from '@mastra/core/agent';
-import { openai } from '@ai-sdk/openai';
+import { anthropic } from '@ai-sdk/anthropic';
 
 // Initialize model - using o3-mini as in the original implementation
-const reportModel = openai('gpt-4.1');
+const reportModel = anthropic(process.env.MODEL ?? "claude-3-5-sonnet-20240620");
 
 export const reportAgent = new Agent({
   name: 'Report Agent',
