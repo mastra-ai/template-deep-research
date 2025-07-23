@@ -1,8 +1,8 @@
 import { Agent } from '@mastra/core/agent';
-import { openai } from '@ai-sdk/openai';
+import { google } from '@ai-sdk/google';
 
 // Initialize model
-const mainModel = openai('gpt-4.1');
+const mainModel = google(process.env.MODEL ?? "gemini-2.5-pro");
 
 export const evaluationAgent = new Agent({
   name: 'Evaluation Agent',

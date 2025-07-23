@@ -1,8 +1,8 @@
 import { Agent } from '@mastra/core/agent';
-import { openai } from '@ai-sdk/openai';
+import { google } from '@ai-sdk/google';
 
 // Initialize model - using o3-mini as in the original implementation
-const reportModel = openai('gpt-4.1');
+const reportModel = google(process.env.MODEL ?? "gemini-2.5-pro");
 
 export const reportAgent = new Agent({
   name: 'Report Agent',

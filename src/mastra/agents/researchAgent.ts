@@ -1,10 +1,15 @@
-import { openai } from '@ai-sdk/openai';
+import { google } from '@ai-sdk/google';
 import { Agent } from '@mastra/core/agent';
 import { evaluateResultTool } from '../tools/evaluateResultTool';
 import { extractLearningsTool } from '../tools/extractLearningsTool';
 import { webSearchTool } from '../tools/webSearchTool';
 
-const mainModel = openai('gpt-4o');
+<<<<<<< HEAD
+const mainModel = google(process.env.MODEL ?? "gemini-2.5-pro");
+=======
+// Initialize model
+const mainModel = google(process.env.MODEL ?? "gemini-2.5-pro");
+>>>>>>> ee7be810f791e6b56112d74958190904e5a00568
 
 export const researchAgent = new Agent({
   name: 'Research Agent',
