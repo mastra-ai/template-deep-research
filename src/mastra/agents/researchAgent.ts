@@ -4,12 +4,7 @@ import { evaluateResultTool } from '../tools/evaluateResultTool';
 import { extractLearningsTool } from '../tools/extractLearningsTool';
 import { webSearchTool } from '../tools/webSearchTool';
 
-<<<<<<< HEAD
 const mainModel = groq(process.env.MODEL ?? "llama-3.3-70b-versatile");
-=======
-// Initialize model
-const mainModel = groq(process.env.MODEL ?? "llama-3.3-70b-versatile");
->>>>>>> 2b188b198d7ba4ebe6b089ca2a92bc1b301b2309
 
 export const researchAgent = new Agent({
   name: 'Research Agent',
