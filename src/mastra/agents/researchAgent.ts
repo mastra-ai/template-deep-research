@@ -1,10 +1,10 @@
-import { openai } from '@ai-sdk/openai';
+import { groq } from '@ai-sdk/groq';
 import { Agent } from '@mastra/core/agent';
 import { evaluateResultTool } from '../tools/evaluateResultTool';
 import { extractLearningsTool } from '../tools/extractLearningsTool';
 import { webSearchTool } from '../tools/webSearchTool';
 
-const mainModel = openai('gpt-4o');
+const mainModel = groq(process.env.MODEL ?? "llama-3.3-70b-versatile");
 
 export const researchAgent = new Agent({
   name: 'Research Agent',

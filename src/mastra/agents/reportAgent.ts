@@ -1,8 +1,8 @@
 import { Agent } from '@mastra/core/agent';
-import { openai } from '@ai-sdk/openai';
+import { groq } from '@ai-sdk/groq';
 
 // Initialize model - using o3-mini as in the original implementation
-const reportModel = openai('gpt-4.1');
+const reportModel = groq(process.env.MODEL ?? "llama-3.3-70b-versatile");
 
 export const reportAgent = new Agent({
   name: 'Report Agent',
