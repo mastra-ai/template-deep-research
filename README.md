@@ -54,13 +54,13 @@ Follow the interactive prompts:
 Create a `.env` file with:
 
 ```
-OPENAI_API_KEY=""
+ANTHROPIC_API_KEY=""
 EXA_API_KEY="your-exa-api-key"
 ```
 
 ## Required Dependencies
 
 - `@mastra/core`: Core Mastra functionality with vNext workflows
-- `@ai-sdk/openai`: OpenAI models integration
+- `@ai-sdk/anthropic`: Anthropic models integration
 - `exa-js`: Exa API client for web search
 - `zod`: Schema definition and validation for workflows
