@@ -1,10 +1,10 @@
-import { openai } from '@ai-sdk/openai';
+import { anthropic } from '@ai-sdk/anthropic';
 import { Agent } from '@mastra/core/agent';
 import { evaluateResultTool } from '../tools/evaluateResultTool';
 import { extractLearningsTool } from '../tools/extractLearningsTool';
 import { webSearchTool } from '../tools/webSearchTool';
 
-const mainModel = openai('gpt-4o');
+const mainModel = anthropic(process.env.MODEL ?? "claude-3-5-sonnet-20240620");
 
 export const researchAgent = new Agent({
   name: 'Research Agent',
