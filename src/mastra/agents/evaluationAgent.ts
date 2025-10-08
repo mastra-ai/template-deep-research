@@ -1,8 +1,8 @@
 import { Agent } from '@mastra/core/agent';
-import { openai } from '@ai-sdk/openai';
+import { groq } from '@ai-sdk/groq';
 
 // Initialize model
-const mainModel = openai('gpt-4.1');
+const mainModel = groq(process.env.MODEL ?? "llama-3.3-70b-versatile");
 
 export const evaluationAgent = new Agent({
   name: 'Evaluation Agent',
