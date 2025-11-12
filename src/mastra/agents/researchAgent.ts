@@ -1,4 +1,3 @@
-import { openai } from '@ai-sdk/openai';
 import { Agent } from '@mastra/core/agent';
 import { evaluateResultTool } from '../tools/evaluateResultTool';
 import { extractLearningsTool } from '../tools/extractLearningsTool';
@@ -7,6 +6,7 @@ import { webSearchTool } from '../tools/webSearchTool';
 const mainModel = openai('gpt-4o');
 
 export const researchAgent = new Agent({
+  id: 'research-agent',
   name: 'Research Agent',
   instructions: `You are an expert research agent. Your goal is to research topics thoroughly by following this EXACT process:
 
