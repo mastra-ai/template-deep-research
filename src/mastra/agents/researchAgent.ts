@@ -4,7 +4,6 @@ import { extractLearningsTool } from '../tools/extractLearningsTool';
 import { webSearchTool } from '../tools/webSearchTool';
 
 export const researchAgent = new Agent({
-  id: 'research-agent',
   name: 'Research Agent',
   instructions: `You are an expert research agent. Your goal is to research topics thoroughly by following this EXACT process:
 
@@ -40,7 +39,7 @@ export const researchAgent = new Agent({
 
   Use all the tools available to you systematically and stop after the follow-up phase.
   `,
-  model: process.env.MODEL || 'openai/gpt-4o',
+  model: process.env.MODEL || 'openai/gpt-4.1',
   tools: {
     webSearchTool,
     evaluateResultTool,

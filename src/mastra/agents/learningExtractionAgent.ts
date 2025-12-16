@@ -1,6 +1,6 @@
 import { Agent } from '@mastra/core/agent';
+
 export const learningExtractionAgent = new Agent({
-  id: 'learning-extraction-agent',
   name: 'Learning Extraction Agent',
   instructions: `You are an expert at analyzing search results and extracting key insights. Your role is to:
 

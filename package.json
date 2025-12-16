@@ -14,9 +14,10 @@
   "description": "Advanced AI deep research assistant using Mastra's workflows and agent capabilities. Creates an interactive, human-in-the-loop research system that allows users to explore topics, evaluate results, and generate comprehensive reports.",
   "type": "module",
   "engines": {
-    "node": ">=22.13.0"
+    "node": ">=20.9.0"
   },
   "dependencies": {
+    "@ai-sdk/openai": "^2.0.87",
     "@mastra/core": "latest",
     "@mastra/libsql": "latest",
     "@mastra/loggers": "latest",

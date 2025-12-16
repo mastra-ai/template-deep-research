@@ -1,4 +1,4 @@
-import { Mastra } from '@mastra/core/mastra';
+import { Mastra } from '@mastra/core';
 import { LibSQLStore } from '@mastra/libsql';
 import { researchWorkflow } from './workflows/researchWorkflow';
 import { learningExtractionAgent } from './agents/learningExtractionAgent';
@@ -10,7 +10,6 @@ import { generateReportWorkflow } from './workflows/generateReportWorkflow';
 
 export const mastra = new Mastra({
   storage: new LibSQLStore({
-    id: 'mastra-storage',
     url: 'file:../mastra.db',
   }),
   agents: {
