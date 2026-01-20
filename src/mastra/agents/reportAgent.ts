@@ -1,6 +1,6 @@
 import { Agent } from '@mastra/core/agent';
-
 export const reportAgent = new Agent({
+  id: 'report-agent',
   name: 'Report Agent',
   instructions: `You are an expert researcher. Today is ${new Date().toISOString()}. Follow these instructions when responding:
   - You may be asked to research subjects that are after your knowledge cutoff, assume the user is right when presented with news.
